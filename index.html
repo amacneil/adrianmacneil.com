@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Adrian Macneil</title>
     <style type="text/css">
@@ -11,14 +11,22 @@
         .container { padding: 1em; }
         .overlay { max-width: 480px; background: white; background: rgba(255, 255, 255, 0.7); padding: 2em 1em; }
         h1 { margin: 0; padding: 0; font-size: 2.5em; font-weight: bold; text-shadow: 1px 1px 0 #ccc; }
-        .links a { display: block; float: left; margin: 5px; }
-        .links a img { width: 40px; height: 40px; }
-        .clear { clear: both; }
+        .links { overflow: hidden; }
+        .links a { display: block; float: left; width: 48px; height: 48px; text-indent: -99em; background: transparent url('images/icons.png') no-repeat left top; background-size: 240px 48px; opacity: 0.8; }
+        .links a:hover { opacity: 1; }
+        .links a.github { background-position: -48px 0; }
+        .links a.twitter { background-position: -96px 0; }
+        .links a.linkedin { background-position: -144px 0; }
+        .links a.skype { background-position: -192px 0; }
         @media (min-width: 768px) {
             .container { padding-left: 10%; }
             .overlay { padding: 2em; }
             h1 { font-size: 3em; }
-            .links a img { width: 50px; height: 50px; }
+            .links a { width: 64px; height: 64px; background-size: 320px 64px; }
+            .links a.github { background-position: -64px 0; }
+            .links a.twitter { background-position: -128px 0; }
+            .links a.linkedin { background-position: -192px 0; }
+            .links a.skype { background-position: -256px 0; }
         }
     </style>
     <link href='http://fonts.googleapis.com/css?family=Rambla:400,700' rel='stylesheet' type='text/css'>
@@ -39,13 +47,12 @@
         <div class="overlay">
             <h1>Adrian Macneil</h1>
             <p class="links">
-                <a href="https://twitter.com/adrianmacneil"><img src="images/twitter.png" alt="Twitter" /></a>
-                <a href="https://github.com/adrianmacneil"><img src="images/github.png" alt="GitHub" /></a>
-                <a href="http://www.linkedin.com/in/adrianmacneil"><img src="images/linkedin.png" alt="LinkedIn" /></a>
-                <a href="mailto:adrian@adrianmacneil.com"><img src="images/email.png" alt="Email" /></a>
-                <a href="skype:adrian.macneil"><img src="images/skype.png" alt="Skype" /></a>
+                <a href="mailto:adrian@adrianmacneil.com" class="email">Email</a>
+                <a href="https://github.com/adrianmacneil" class="github">GitHub</a>
+                <a href="https://twitter.com/adrianmacneil" class="twitter">Twitter</a>
+                <a href="http://www.linkedin.com/in/adrianmacneil" class="linkedin">LinkedIn</a>
+                <a href="skype:adrian.macneil" class="skype">Skype</a>
             </p>
-            <div class="clear"></div>
             <p>
                 Web developer, business enthusiast. Big picture thinker, perfectionist.<br />
                 Aspiring author &amp; speaker. Traveller. Looking for the next big thing. You?
